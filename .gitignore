@@ -1,0 +1,73 @@
+# Kubernetes / manifests tooling
+*.rendered.yaml
+*.tmp.yaml
+kustomize.out
+helm.out
+
+# Policy tooling
+opa-test-results/
+policy-reports/
+gatekeeper-audit/
+kyverno-reports/
+
+# Security scanning
+trivy-reports/
+trivy-cache/
+checkov-reports/
+kube-linter-reports/
+
+# Generated compliance artifacts
+compliance-reports/
+reports/
+artifacts/
+
+# Runtime / local execution
+tmp/
+.tmp/
+.cache/
+.local/
+
+# Scripts output
+scripts/*.out
+scripts/*.tmp
+
+# Environment-specific overrides
+environments/*/*.local.yaml
+environments/*/*.override.yaml
+
+# Secrets and credentials
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.vault
+secrets.yaml
+secrets.enc.yaml
+
+# CI artifacts
+ci/output/
+ci/tmp/
+ci/artifacts/
+
+# Containers
+.docker/
+docker-compose.override.yml
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Env files
+.env
+.env.*
+.envrc
+
+# Drafts
+README_draft.md
+docs/draft.md
+docs/*_draft.md
