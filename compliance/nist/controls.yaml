@@ -1,0 +1,21 @@
+nist:
+  AC-6:
+    description: Least Privilege
+    implementation:
+      - rbac/base
+
+  AU-2:
+    description: Audit Events
+    implementation:
+      - observability-security/audit-logs
+
+  CM-5:
+    description: Access Restrictions for Change
+    implementation:
+      - policy-engine
+      - ci/
+
+  SI-7:
+    description: Integrity Verification
+    implementation:
+      - supply-chain-security/image-policy

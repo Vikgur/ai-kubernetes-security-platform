@@ -1,0 +1,20 @@
+cis:
+  1.2.1:
+    description: API server audit logging enabled
+    implementation:
+      - observability-security/audit-logs/audit-policy.yaml
+
+  1.2.7:
+    description: Authorization mode RBAC enabled
+    implementation:
+      - cluster/hardening/api-server.yaml
+
+  1.3.2:
+    description: Secure etcd configuration
+    implementation:
+      - cluster/hardening/etcd.yaml
+
+  5.1.3:
+    description: Least privilege RBAC
+    implementation:
+      - rbac/base/roles.yaml
