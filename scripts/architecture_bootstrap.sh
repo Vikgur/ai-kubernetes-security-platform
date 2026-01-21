@@ -48,9 +48,10 @@ network-security/cni/placeholder.yaml
 network-security/network-policies/{default-deny.yaml,namespace-isolation.yaml}
 network-security/dns-security.yaml
 
-runtime-security/admission/{validating-webhook.yaml,mutating-webhook.yaml,README.md}
+runtime-security/README.md
+runtime-security/admission/{validating-webhook.yaml,mutating-webhook.yaml}
 runtime-security/pod-security/{restricted.yaml,baseline.yaml}
-runtime-security/seccomp/{default.json,README.md}
+runtime-security/seccomp/{default.json}
 
 supply-chain-security/image-policy/{allowed-registries.yaml,signed-images-only.yaml}
 supply-chain-security/README.md
