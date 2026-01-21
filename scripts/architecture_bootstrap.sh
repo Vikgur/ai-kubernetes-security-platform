@@ -34,14 +34,16 @@ README.md
 .trivyignore
 .checkov.yaml
 
-cluster/bootstrap/{README.md,placeholder.yaml}
+cluster/README.md
+cluster/bootstrap/{placeholder.yaml}
 cluster/baseline/{pod-security-standards.yaml,namespaces.yaml,resource-quotas.yaml}
 cluster/hardening/{api-server.yaml,controller-manager.yaml,scheduler.yaml,etcd.yaml}
 
+rbac/README.md
 rbac/base/{roles.yaml,rolebindings.yaml,serviceaccounts.yaml}
 rbac/break-glass/{README.md,break-glass-admin.yaml}
 
-network-security/cni/README.md
+network-security/README.md
 network-security/cni/placeholder.yaml
 network-security/network-policies/{default-deny.yaml,namespace-isolation.yaml}
 network-security/dns-security.yaml

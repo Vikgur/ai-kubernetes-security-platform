@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cni-security-requirements
+  namespace: kube-system
+data:
+  requirements: |
+    - eBPF-based dataplane
+    - Enforced NetworkPolicy (Ingress/Egress)
+    - DNS-aware policies
+    - Visibility: flow logs
+    - No allow-all defaults
