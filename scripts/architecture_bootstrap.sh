@@ -56,20 +56,25 @@ runtime-security/seccomp/{default.json}
 supply-chain-security/image-policy/{allowed-registries.yaml,signed-images-only.yaml}
 supply-chain-security/README.md
 
-policy-engine/opa-gatekeeper/README.md
-policy-engine/kyverno/README.md
+policy-engine/README.md
+policy-engine/opa-gatekeeper/{constraints,templates}/{required-labels.yaml,deny-privileged.yaml}
+policy-engine/kyverno/policies/{enforce-security-context.yaml,mutate-seccomp.yaml}
 
-observability-security/audit-logs/{audit-policy.yaml,README.md}
+observability-security/README.md
+observability-security/audit-logs/audit-policy.yaml
 observability-security/falco/placeholder.yaml
+observability-security/prometheus-rules/security-alerts.yaml
 
 multi-tenancy/{tenant-isolation.yaml,quota-enforcement.yaml,README.md}
 
+compliance/README.md
 compliance/cis/{mapping.md,controls.yaml}
 compliance/nist/{mapping.md,controls.yaml}
 compliance/iso27001/mapping.md
 
-threat-model/{STRIDE.md,attack-scenarios.md,mitigations.md}
+threat-model/{STRIDE.md,attack-scenarios.md,mitigations.md,README.md}
 
+environments/{kustomization.yaml,README.md}
 environments/base/kustomization.yaml
 environments/dev/kustomization.yaml
 environments/stage/kustomization.yaml
@@ -89,11 +94,8 @@ touch "${files[@]}"
 gitkeep_dirs=(
 policy-engine/rego
 supply-chain-security/{sbom,provenance}
-observability-security/prometheus-rules
 compliance/reports
 runtime-security/apparmor
-policy-engine/opa-gatekeeper/{constraints,templates}
-policy-engine/kyverno/policies
 )
 
 for d in "${gitkeep_dirs[@]}"; do
