@@ -1,0 +1,24 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: require-image-signature
+spec:
+  validationFailureAction: Enforce
+  background: false
+  rules:
+    - name: verify-image-signature
+      match:
+        any:
+          - resources:
+              kinds:
+                - Pod
+      verifyImages:
+        - imageReferences:
+            - "registry.internal.ai/*"
+          attestors:
+            - entries:
+                - keys:
+                    publicKeys: |
+                      -----BEGIN PUBLIC KEY-----
+                      REPLACE_WITH_COSIGN_PUBLIC_KEY
+                      -----END PUBLIC KEY-----
