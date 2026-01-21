@@ -80,6 +80,7 @@ environments/dev/kustomization.yaml
 environments/stage/kustomization.yaml
 environments/prod/kustomization.yaml
 
+ci/README.md
 ci/{kube-linter.yml,opa-policy-check.yml,trivy-k8s.yml,manifest-validate.yml,compliance-report.yml}
 
 scripts/{apply-baseline.sh,verify-cluster.sh,audit-dump.sh,README.md}
