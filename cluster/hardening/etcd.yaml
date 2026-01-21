@@ -1,0 +1,10 @@
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: ClusterConfiguration
+etcd:
+  local:
+    dataDir: /var/lib/etcd
+    extraArgs:
+      client-cert-auth: "true"
+      peer-client-cert-auth: "true"
+      auto-tls: "false"
+      peer-auto-tls: "false"
