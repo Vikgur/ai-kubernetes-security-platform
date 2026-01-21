@@ -1,0 +1,11 @@
+checks:
+  addAllBuiltIn: true
+  exclude:
+    - "unset-memory-requirements"
+    - "unset-cpu-requirements"
+
+customChecks:
+  - name: no-privileged-containers
+    template: privileged-container
+    params:
+      forbidden: true

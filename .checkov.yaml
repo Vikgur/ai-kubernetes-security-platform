@@ -1,0 +1,7 @@
+quiet: true
+compact: true
+framework:
+  - kubernetes
+
+skip-check: []
+soft-fail: false

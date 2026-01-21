@@ -1,0 +1,11 @@
+services:
+  local:
+    url: http://localhost:8181
+
+bundles:
+  kubernetes:
+    service: local
+    resource: bundles/kubernetes.tar.gz
+
+decision_logs:
+  console: true
