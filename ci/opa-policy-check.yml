@@ -1,0 +1,15 @@
+name: opa-policy-check
+
+on:
+  pull_request:
+
+jobs:
+  opa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: OPA eval
+        uses: open-policy-agent/setup-opa@v2
+      - name: Run Gatekeeper policies
+        run: |
+          opa test policy-engine/opa-gatekeeper -v

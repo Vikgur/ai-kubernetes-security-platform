@@ -1,0 +1,15 @@
+name: kube-linter
+
+on:
+  pull_request:
+
+jobs:
+  kube-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run kube-linter
+        uses: stackrox/kube-linter-action@v1
+        with:
+          directory: .
+          config: .kube-linter.yaml
