@@ -1,0 +1,24 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: security-alerts
+  namespace: system-workloads
+spec:
+  groups:
+    - name: kubernetes-security
+      rules:
+        - alert: KubernetesAuditFailure
+          expr: rate(apiserver_audit_event_total{level="RequestResponse"}[5m]) > 0
+          for: 1m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Critical Kubernetes audit event detected"
+
+        - alert: PrivilegedPodDetected
+          expr: kube_pod_container_security_context_privileged == 1
+          for: 1m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Privileged pod running in cluster"
