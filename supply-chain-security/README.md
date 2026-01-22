@@ -3,3 +3,6 @@ Checklist
 – Signature is required
 – Unknown image does not start
 – CI → image → deploy are cryptographically linked
+
+Conclusion
+The supply chain is closed.
